@@ -1,0 +1,87 @@
+.top {
+    padding: none;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    height:min-content;
+    color: #05f;
+    background-color: #000;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#loginbutton {
+    align-self: center;
+    margin:10px;
+    transition: 0.5s;
+}
+
+#loginbutton:hover{
+    background-color: #444;
+    transition: 0.5s;
+}
+
+body {
+    margin: 0px;
+}
+
+#logo {
+    height: 64px;
+    width: 64px;
+    align-self: center;
+    margin: 5px;
+}
+
+button {
+    cursor: pointer;
+    height: 45px;
+    width: 45px;
+    border-radius: 27px;
+    border-color: #fff;
+    color: #fff;
+    border-style: solid;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#moonbtn {
+    margin: 10px;
+    border-width: 5px;
+}
+
+.gg-profile {
+    --ggs: 2.5;
+}
+
+.gg-moon {
+    --ggs: 1.5;
+}
+
+.dark {
+    background-color: #555;
+    color: #fff;
+    transition: 0.5s;
+    height: 100svh;
+}
+
+.light {
+    transition: 0.5s;
+    height: 100svh;
+}
+
+.container {
+    margin-top: 0;
+    height: 100svh;
+    display: flex;
+    flex-direction: column;
+    width: 100svw;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .top {
+        display: none;
+    }
+}
