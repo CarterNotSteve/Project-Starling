@@ -148,7 +148,7 @@ html {
     display: flex;
 }
 
-#menu {
+.menu {
     position: absolute;
     margin-left: calc(100vw - 200px);
     width: 200px;
@@ -157,11 +157,11 @@ html {
     transition: 0.25s;
     font-size: 1.5em;
     padding-left:75px;
+    z-index: 999;
 }
 
-#topmenu {
-    margin-top: 20px;
-    z-index: 999;
+.topmenu {
+    margin-top: 40px;
 }
 
 .menu-button {
@@ -169,13 +169,13 @@ html {
     
 }
 
-#menu:hover {
+.menu:hover {
     cursor: pointer;
     user-select: none;
     background-color: #444;
 }
 
-#menu p {
+.menu p {
     margin-top: 0;
     margin-bottom: 0;
     padding-top: 7px;
