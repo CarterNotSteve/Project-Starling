@@ -5,6 +5,7 @@
     justify-content: space-between;
     width: 100%;
     height:min-content;
+    margin-bottom: 0;
     color: #05f;
     background-color: #000;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -12,7 +13,7 @@
 
 #loginbutton {
     align-self: center;
-    margin:10px;
+    margin-right:10px;
     transition: 0.5s;
 }
 
@@ -78,14 +79,15 @@ button {
 
 .container {
     margin-top: 0;
-    height: 100svh;
+    height: min-content;
     display: flex;
     flex-direction: column;
     width: 100svw;
+    
 }
 
 .post {
-    margin-top:4px;
+    margin-top:5px;
     margin-left: 90px;
     margin-right: 90px;
     padding-left: 3em;
@@ -94,17 +96,92 @@ button {
     border-radius: 45px;
 }
 
+#postbox {
+    border: 5px solid #888;
+    border-radius: 45px;
+
+    margin-left: 90px;
+    margin-right: 10px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 10px 50px 10px 50px;
+    font-size: 1.25em;
+    flex-grow: 2;
+}
+
+html {
+    overflow: scroll ;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+    height: 0px;
+}
+
+#postgui {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#postbtn {
+    margin-right: 90px;
+    margin-left: 0;
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    transition: 0.25s;
+}
+
+#postbtn:hover {
+    background-color: #111;
+}
+
+#sendimg {
+    width: 30px;
+    margin-left: 5px;
+}
+
+#login-dropdown {
+    display: flex;
+}
+
 #menu {
-    position: static;
-    width: 50px;
+    position: absolute;
+    margin-left: calc(100vw - 200px);
+    width: 200px;
+    height: calc(min-content + 190);
     background-color: #000;
+    transition: 0.25s;
+    font-size: 1.5em;
+    padding-left:75px;
+}
+
+#topmenu {
+    margin-top: 20px;
+    z-index: 999;
 }
 
 .menu-button {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
+    
 }
 
+#menu:hover {
+    cursor: pointer;
+    user-select: none;
+    background-color: #444;
+}
+
+#menu p {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    
+}
 
 @media only screen and (max-width: 600px) {
     .top {

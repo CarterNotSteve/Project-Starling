@@ -1,6 +1,11 @@
 <script lang="ts">
+    import {Md5} from 'ts-md5';
+    import {getCookie,setCookie} from 'typescript-cookie';
+    
     var dark = true ;
     var loginDropdown = false;
+    
+    // console.log(Md5.hashStr("HelloWorld"));
 
     const posts = [
         {
@@ -54,14 +59,24 @@
     </div>
 
     <div class="login-dropdown" hidden={!loginDropdown}>
+        <div id="menu topmenu">
+            <div class="menu-button">
+                <p>Login</p>
+            </div> 
+        </div>
         <div id="menu">
             <div class="menu-button">
-                <p>Hello</p>
+                <p>Logout</p>
             </div>
         </div>
-    </div>
+        </div>
 
-    <div class="content" >
+        <div id="postgui">
+            <div id="postbox" contenteditable></div>
+            <button id="postbtn"><img id="sendimg" style="filter: invert(1);" alt="send" src="./public/assets/sned.webp"></button>
+        </div>
+
+        <div class="content" >
         {#each posts as post}
             <div class="post">
                 <h2>{post.username}</h2>
