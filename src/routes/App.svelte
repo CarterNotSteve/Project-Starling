@@ -4,6 +4,7 @@
     
     var dark = true ;
     var loginDropdown = false;
+    export var signedin = false;
     
     // console.log(Md5.hashStr("HelloWorld"));
 
@@ -51,14 +52,14 @@
 
 <div class="container" class:dark={dark} class:light={!dark}>
     <div class="top">
-        <img id="logo" alt="logo" src="./assets/logo.png"/>
+        <img id="logo" alt="logo" src="./public/assets/logo.png"/>
         <button title="Night Mode" id="moonbtn" on:click={() => {dark=!dark}}><i class="gg-moon"></i></button>
         <button title="Log in" id="loginbutton" on:click={() => {loginDropdown=!loginDropdown}}>
             <i class="gg-profile" id="login-icon"></i>
         </button>
     </div>
 
-    <div class="login-dropdown" hidden={!loginDropdown}>
+    <div class="login-dropdown" hidden={!loginDropdown && signedin}>
         <div id="menu topmenu">
             <div class="menu-button">
                 <p>Login</p>
@@ -66,7 +67,7 @@
         </div>
         <div id="menu">
             <div class="menu-button">
-                <p>Logout</p>
+                <p>Signup</p>
             </div>
         </div>
         </div>
